@@ -231,12 +231,41 @@ const Home = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* IT Consulting Division */}
+            <Card className="border border-border hover:border-primary/50 transition-colors">
+              <CardContent className="pt-8 pb-8">
+                <div className="inline-flex h-14 w-14 items-center justify-center rounded-lg bg-primary/10 mb-6">
+                  <Brain className="h-7 w-7 text-primary" />
+                </div>
+                <h3 className="text-2xl font-bold mb-3">IT Consulting Division</h3>
+                <p className="text-muted-foreground mb-6">
+                  Custom AI agents, digital transformation, cloud infrastructure, and enterprise
+                  software solutions — including our flagship Warehouse Tracker AI platform.
+                </p>
+                <div className="space-y-2 mb-6">
+                  {["AI Agents & Automation", "Custom Software Development", "Warehouse Tracker AI Platform"].map(f => (
+                    <div key={f} className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <CheckCircle size={14} className="text-primary shrink-0" />
+                      {f}
+                    </div>
+                  ))}
+                </div>
+                <Link to="/divisions">
+                  <Button variant="outline" className="w-full">
+                    Learn More
+                    <ArrowRight size={14} className="ml-2" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Packaging Division */}
             <Card className="border border-border hover:border-primary/50 transition-colors">
               <CardContent className="pt-8 pb-8">
                 <div className="inline-flex h-14 w-14 items-center justify-center rounded-lg bg-primary/10 mb-6">
                   <Package className="h-7 w-7 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold mb-3">CaseStore Packaging Division</h3>
+                <h3 className="text-2xl font-bold mb-3">Packaging Division</h3>
                 <p className="text-muted-foreground mb-6">
                   Premium packaging supplies, logistics support, and smart inventory management
                   for warehouses and distribution centers across the U.S.
@@ -252,33 +281,6 @@ const Home = () => {
                 <a href="https://packaging.casestore.us" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" className="w-full">
                     Visit Packaging Division
-                    <ArrowRight size={14} className="ml-2" />
-                  </Button>
-                </a>
-              </CardContent>
-            </Card>
-
-            <Card className="border border-border hover:border-primary/50 transition-colors">
-              <CardContent className="pt-8 pb-8">
-                <div className="inline-flex h-14 w-14 items-center justify-center rounded-lg bg-primary/10 mb-6">
-                  <Brain className="h-7 w-7 text-primary" />
-                </div>
-                <h3 className="text-2xl font-bold mb-3">Warehouse Tracker AI</h3>
-                <p className="text-muted-foreground mb-6">
-                  AI-powered warehouse management platform with real-time tracking, intelligent
-                  insights, and automated ordering for modern logistics operations.
-                </p>
-                <div className="space-y-2 mb-6">
-                  {["Real-Time Order Tracking", "AI-Powered Analytics", "Automated Reorder Workflows"].map(f => (
-                    <div key={f} className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <CheckCircle size={14} className="text-primary shrink-0" />
-                      {f}
-                    </div>
-                  ))}
-                </div>
-                <a href="https://warehouse.casestore.us" target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" className="w-full">
-                    Visit Warehouse Tracker AI
                     <ArrowRight size={14} className="ml-2" />
                   </Button>
                 </a>
